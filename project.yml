@@ -1,0 +1,30 @@
+name: AboutSim
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  AboutSim:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Web
+        buildPhase: resources
+    info:
+      path: Config/Info.plist
+      properties:
+        CFBundleDisplayName: 关于本机模拟器
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        NSPhotoLibraryAddUsageDescription: 用于把生成的图片保存到相册
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.aboutsim
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_VERSION: "5.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
